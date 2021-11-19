@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'AvenirNextLTPro';
+    //the path to the font has to be the path from the COMPILED CSS file - NOT from the partial (don't use VS code to autofill your paths - it will be wrong)
+}
+
+$font-stack: 'AvenirNextLTPro', sans-serif;
