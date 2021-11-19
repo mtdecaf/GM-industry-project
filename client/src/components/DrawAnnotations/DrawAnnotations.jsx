@@ -1,14 +1,16 @@
+import "./DrawAnnotations.scss";
 import React, { Component, useState } from "react";
 import ReactDOM from "react-dom";
 import { Stage, Layer, Rect } from "react-konva";
 import { Html } from 'react-konva-utils';
+import { Link } from 'react-router-dom';
 
 import image1 from "../../assets/images/image1.jpg"
 import image2 from "../../assets/images/image2.jpg"
 
-const divStyle = {
-    width: "900px",
-    height: "900px",
+let divStyle = {
+    width: "450px",
+    height: "450px",
     backgroundImage: `url(${image1})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover'
@@ -21,16 +23,12 @@ class DrawAnnotations extends Component {
         newAnnotation: []
     }
 
-    //   const [annotations, setAnnotations] = useState([]);
-    //   const [newAnnotation, setNewAnnotation] = useState([]);
-
     handleMouseDown = event => {
         if (this.state.newAnnotation.length === 0) {
             const { x, y } = event.target.getStage().getPointerPosition();
             this.setState({
                 newAnnotation: [{ x, y, width: 0, height: 0, key: "0" }]
             })
-            // setNewAnnotation([{ x, y, width: 0, height: 0, key: "0" }]);
         }
     };
 
@@ -54,8 +52,6 @@ class DrawAnnotations extends Component {
                 newAnnotation: []
             })
             console.log(this.state.annotations)
-            // setNewAnnotation([]);
-            // setAnnotations(annotations);
         }
     };
 
@@ -76,15 +72,6 @@ class DrawAnnotations extends Component {
                     }
                 ]
             });
-            // setNewAnnotation([
-            //     {
-            //         x: sx,
-            //         y: sy,
-            //         width: x - sx,
-            //         height: y - sy,
-            //         key: "0"
-            //     }
-            // ]);
         }
     };
 
@@ -92,19 +79,15 @@ class DrawAnnotations extends Component {
         const annotationsToDraw = [...this.state.annotations, ...this.state.newAnnotation];
         return (
             <>
-            {/* <div className="container" style={ divStyle }></div> */}
             <div className="container" style={ divStyle }>
                 <Stage
                   onMouseDown={this.handleMouseDown}
                   onMouseUp={this.handleMouseUp}
                   onMouseMove={this.handleMouseMove}
-                  width={900}
-                  height={900}
+                  width={450}
+                  height={450}
                 >
                   <Layer>
-                      {/* <Html>
-                          <img src={image1} alt="first pic" className="bg-image" />
-                      </Html> */}
                       {annotationsToDraw.map(value => {
                           return (
                               <Rect
@@ -117,12 +100,13 @@ class DrawAnnotations extends Component {
                               />
                           );
                       })}
-                      {/* <img src={image1} alt="first pic" className="bg-image" /> */}
                   </Layer>
                 </Stage>
             </div>
+            <Link to = '/finish' className = 'container__submit'>Submit</Link>
             </>
-        );}
+        );
+    }
 };
 
 export default DrawAnnotations;

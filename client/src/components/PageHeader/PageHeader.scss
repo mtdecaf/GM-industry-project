@@ -4,8 +4,23 @@
 @import '../../styles/partials/global';
 
 .header {
-  @include fullWidth;
-  padding-left:2.5%;
-  padding-right:2.5%;
+  box-sizing: border-box;
+  position:fixed;
+  top:2%;
+  left:2%;
+  background:#fff;
+  z-index: 888;
 
+  &__link {
+    text-decoration: underline;
+    color:blue;
+    font-size:2rem;
+    box-sizing: border-box;
+    padding: 10.5%;
+    border:2px solid blue;
+  }
+  &__link:hover {
+    background:blue;
+    color:#fff;
+  }
 }

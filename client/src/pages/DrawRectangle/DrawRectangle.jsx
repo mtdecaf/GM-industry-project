@@ -1,9 +1,11 @@
 import DrawAnnotations from "../../components/DrawAnnotations/DrawAnnotations";
+import PageHeader from '../../components/PageHeader/PageHeader';
 
 function DrawRectangle() {
   return (
+    
     <div>
-      <p>Start to draw!</p>
+      <PageHeader />
       <DrawAnnotations />
     </div>
   );

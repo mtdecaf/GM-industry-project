@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.scss';
-import Images from './components/Images/Images';
-// import HomePage from "./pages/HomePage/HomePage"
-// import HomePage from "./pages/HomePage/HomePage"
+import HomePage from "./pages/HomePage/HomePage"
+import FinishPage from "./pages/FinishPage/FinishPage"
 import DrawRectangle from "./pages/DrawRectangle/DrawRectangle"
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
+
 
 const App = () => {
+
   return (
-    <div className="App">
-      <Images/>
-    </div>
+    <BrowserRouter>
+    <Switch>
+      <Route path="/" exact component={HomePage}/>
+      <Route path="/rectangle" component={DrawRectangle}/>
+      <Route path="/finish" component={FinishPage}/>
+    </Switch>
+  </BrowserRouter>
   );
-    // <BrowserRouter>
-    //           <Switch>
-    //             <Route path="/" exact component={HomePage}/>
-    //           </Switch>
-    // </BrowserRouter>
-  // )
 }
 
 export default App;
