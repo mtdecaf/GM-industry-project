@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import "./Images.scss"
 import axios from "axios"
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default class Images extends Component {
     state = {
@@ -21,9 +21,9 @@ export default class Images extends Component {
         }
         return(
             <>
-                <button type="submit" onClick={this.nextImage}>Next</button>
                 <img src={`http://localhost:8080/image${this.state.imagesId[this.state.imagesIndex]}.jpeg`} />
-                {/* <Link to="/rewards">Submit</Link> */}
+                <button type="submit" onClick={this.nextImage}>Next</button>
+                <Link to={{pathname:"/rewards", points:this.state.imagesIndex}} >Submit</Link>
             </>
         );
     }

@@ -1,6 +1,8 @@
 .header{
     background-color: black;
     display: flex;
+    position: absolute;
+    top: 0;
     &__component{
         color: white;
         width:calc(100vw / 3);

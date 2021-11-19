@@ -2,6 +2,7 @@ import './HomePage.scss';
 import { Component } from 'react';
 import axios from 'axios';
 import PageHeader from '../../components/PageHeader/PageHeader';
+import Header from '../../components/Header/Header';
 
 class HomePage extends Component {
   
@@ -20,6 +21,7 @@ render() {
   
   return (
     <>
+      <Header />
       {/* <PageHeader /> */}
     </>
   )

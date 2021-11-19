@@ -2,17 +2,19 @@ import React, { Component, useState } from "react";
 import ReactDOM from "react-dom";
 import { Stage, Layer, Rect } from "react-konva";
 import { Html } from 'react-konva-utils';
+import "../DrawAnnotations/DrawAnnotations.scss"
+import { Link } from 'react-router-dom'
 
 import image1 from "../../assets/images/image1.jpg"
 import image2 from "../../assets/images/image2.jpg"
 
 const divStyle = {
-    width: "900px",
-    height: "900px",
+    width: "100vw",
+    height: "calc(100vw / 1.25)",
     backgroundImage: `url(${image1})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover'
-}
+};
 
 class DrawAnnotations extends Component {
 
@@ -98,8 +100,8 @@ class DrawAnnotations extends Component {
                   onMouseDown={this.handleMouseDown}
                   onMouseUp={this.handleMouseUp}
                   onMouseMove={this.handleMouseMove}
-                  width={900}
-                  height={900}
+                  width={460}
+                  height={400}
                 >
                   <Layer>
                       {/* <Html>
@@ -120,6 +122,7 @@ class DrawAnnotations extends Component {
                       {/* <img src={image1} alt="first pic" className="bg-image" /> */}
                   </Layer>
                 </Stage>
+                <div><Link className="drawAnno__button" to={{pathname:"/rewards", points:100}} >Submit</Link></div>
             </div>
             </>
         );}
