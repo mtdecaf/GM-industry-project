@@ -1,13 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import DrawRectangle from './pages/DrawRectangle';
+import HomePage from "./pages/HomePage/HomePage"
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <DrawRectangle />
-    </div>
-  );
+    <BrowserRouter>
+              <Switch>
+                <Route path="/" exact component={HomePage}/>
+              </Switch>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
