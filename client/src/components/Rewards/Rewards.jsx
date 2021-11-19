@@ -4,7 +4,7 @@ import "./Rewards.scss"
 import Header from '../Header/Header';
 
 export default class Rewards extends Component {
-    state = {points: 100};
+    state = {points: 0};
     fillerStyles = {
         height: '100%',
         width: `${this.state.points/10}%`,
@@ -12,6 +12,9 @@ export default class Rewards extends Component {
         borderRadius: 'inherit',
         textAlign: 'right'
       }
+    componentDidMount(){
+        this.setState({points:this.state.points+this.props.points});
+    }
     render() {
         return (
             <div className="rewards">
@@ -26,7 +29,7 @@ export default class Rewards extends Component {
                 </h1>
                 <div className="rewards__subtitle">Your contribution has helped prevent {Number(this.state.points)/100} auto accident</div>
                 <div className="rewards__button-container">
-                    <Link className="rewards__next" to="/">ANSWER ANOTHER</Link>
+                    <Link className="rewards__next" to="/rec">ANSWER ANOTHER</Link>
                     <Link className="rewards__home" to="/">RETURN TO HOME</Link>
                 </div>
                 <div className="rewards__footer">Get involved</div>
