@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.scss';
-import Images from './component/Images/Images';
+import Images from './components/Images/Images';
 // import HomePage from "./pages/HomePage/HomePage"
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
