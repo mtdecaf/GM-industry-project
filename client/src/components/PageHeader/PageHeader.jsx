@@ -8,6 +8,9 @@ const PageHeader =  () => {
         <Link className="header__link" to = "/">
             Home
         </Link>
+        <Link className="header__link" to="/rectangle">
+            Rectangle
+        </Link>
     </header>
     );
 }
