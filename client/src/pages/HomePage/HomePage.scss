@@ -1,0 +1,57 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/keyframes" as *;
+@use "../../styles/partials/global";
+
+.desktop-left {
+    @include fullWidth;
+    padding:0;
+    @include paddingLeftRight;
+
+    @include tablet {
+        @include fullWidth;
+        @include paddingLeftRight;
+    }
+
+    @include desktop {
+        width:67%;
+        float:left;
+        box-sizing: border-box;
+        position: absolute;
+        left:3%;
+        top:37.438rem;
+        padding:0;
+    }
+}
+
+.desktop-right {
+    @include fullWidth;
+    padding:0;
+    @include paddingLeftRight;
+
+    @include tablet {
+        @include fullWidth;
+        @include paddingLeftRight;
+    }
+
+    @include desktop {
+        width:38%;
+        float:left;
+        box-sizing: border-box;
+        position: absolute;
+        right:-9%;
+        top:37.438rem;
+        padding:0;
+    }
+}
+#canvas {
+    width:2000px;
+    height:2000px;
+    border: 10px solid transparent;
+}
+.rectangle {
+    border: 1px solid #FF0000;
+    position: absolute;
+}

@@ -1,0 +1,47 @@
+@use "variables" as *;
+@use "colors" as *;
+
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin fullWidth {
+    width:100%;
+    box-sizing:border-box;
+    float:left;
+}
+
+@mixin paddingLeftRight {
+    padding-left:2.5%;
+    padding-right:2.5%;
+}
+
+@mixin alignCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin alignLeft {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+@mixin alignAround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@mixin alignBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
