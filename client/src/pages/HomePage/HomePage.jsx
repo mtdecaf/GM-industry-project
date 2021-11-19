@@ -10,7 +10,6 @@ state = {
 }
 
 componentDidMount() {
-
   
 }
 
