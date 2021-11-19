@@ -7,7 +7,7 @@ class Header extends Component {
     render() {
         return (
             <div className="header">
-                <span className="header__logo header__component">logo</span>
+                <a href="/" className="header__logo header__component">logo</a>
                 <span className="header__title header__component">GM rewards</span>
                 <span className="header__burger-menu header__component">
                     <svg viewBox="0 0 100 80" width="40" height="40">
