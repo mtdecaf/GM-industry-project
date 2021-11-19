@@ -20,7 +20,8 @@ class DrawAnnotations extends Component {
 
     state = {
         annotations: [],
-        newAnnotation: []
+        newAnnotation: [],
+        points: 0
     }
 
     //   const [annotations, setAnnotations] = useState([]);
@@ -122,7 +123,7 @@ class DrawAnnotations extends Component {
                       {/* <img src={image1} alt="first pic" className="bg-image" /> */}
                   </Layer>
                 </Stage>
-                <div><Link className="drawAnno__button" to={{pathname:"/rewards", points:100}} >Submit</Link></div>
+                <div><Link className="drawAnno__button" to={{pathname:"/rewards", points:this.state.points+100}} >Submit</Link></div>
             </div>
             </>
         );}

@@ -4,7 +4,7 @@ import "./Rewards.scss"
 import Header from '../Header/Header';
 
 export default class Rewards extends Component {
-    state = {points: 0};
+    state = {points: 100};
     fillerStyles = {
         height: '100%',
         width: `${this.state.points/10}%`,
@@ -12,9 +12,9 @@ export default class Rewards extends Component {
         borderRadius: 'inherit',
         textAlign: 'right'
       }
-    componentDidMount(){
-        this.setState({points:this.state.points+this.props.points});
-    }
+    // componentDidMount(){
+    //     this.setState({points:this.state.points+this.props.location.points});
+    // }
     render() {
         return (
             <div className="rewards">
