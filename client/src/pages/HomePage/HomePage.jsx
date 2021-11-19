@@ -10,16 +10,12 @@ state = {
 }
 
 componentDidMount() {
-
-  
 }
 
 componentDidUpdate(prevProps) {
-  
 }
 
 render() {
-
   document.title = "GM-industry-project";
   
   return (
