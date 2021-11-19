@@ -20,7 +20,7 @@ render() {
   
   return (
     <>
-      <PageHeader />
+      {/* <PageHeader /> */}
     </>
   )
 }

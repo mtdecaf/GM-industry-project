@@ -7,20 +7,23 @@ import Header from './components/Header/Header';
 import DrawAnnotations from './components/DrawAnnotations/DrawAnnotations';
 import DrawRectangle from "./pages/DrawRectangle/DrawRectangle"
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import HomePage from "./pages/HomePage/HomePage"
 
 const App = () => {
   return (
     <div className="App">
-      <Header/>
       {/* <Images />
       <DrawAnnotations/> */}
+        <BrowserRouter>
+      <Header/>
+
+             <Switch>
+               <Route path="/" exact component={HomePage}/>
+             </Switch>
+        </BrowserRouter>
     </div>
   );
-    // <BrowserRouter>
-    //           <Switch>
-    //             <Route path="/" exact component={HomePage}/>
-    //           </Switch>
-    // </BrowserRouter>
+
   // )
 }
 
