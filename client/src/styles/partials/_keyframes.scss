@@ -1,0 +1,16 @@
+@keyframes alert {
+    0% {
+        border:2px solid red;
+    }
+    100% {
+        border:2px solid #afafaf;
+    }
+}
+@keyframes success {
+    0% {
+        border:2px solid rgb(30, 255, 0);
+    }
+    100% {
+        border:2px solid #afafaf;
+    }
+}
